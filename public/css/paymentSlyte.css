@@ -1,0 +1,176 @@
+.article-top-4{
+  width: 37%;
+}
+
+.article-top-5{
+  width: 20%;
+  float: right;
+}
+
+.article-top-6{
+  width: 120%;
+  margin: -13% -10%
+}
+
+.article-top-7{
+  width: 6%;
+  position: absolute;
+  left: 20%;
+  bottom: -11%;
+}
+
+.article-top-8{
+  width: 10%;
+  position: absolute;
+  right: 5px;
+  bottom: -11%;
+}
+
+.article-top-9{
+  width: 5%;
+  position: absolute;
+  right: 0;
+  bottom: 40%;
+}
+
+.container{
+  padding: 0 !important;
+}
+
+.article-middle-bg-1{
+  background-color: var(--form-color);
+  border-radius: 25px 25px;
+}
+
+.article-middle-bg-2{
+  background-color: var(--form-color);
+  border-radius: 25px 25px;
+}
+
+.article-middle-dashed-1{
+  background-color: var(--dashed-bg-color);
+  border: 5px dashed var(--dashed-color);
+  border-radius: 25px 25px;
+}
+
+label{
+  font-weight: bold;
+}
+
+.article-middle-2{
+  width: 55%;
+  margin-left: 22%;
+  margin-top: -10%;
+}
+
+.article-middle-3{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -10%;
+  
+}
+
+.article-middle-4{
+  width: 8.2%;
+  position: absolute;
+  right: 38%;
+  top: 36%;
+}
+
+.article-middle-5{
+  width: 14%;
+  position: absolute;
+  left: -1%;
+  bottom: -7%;
+}
+
+.article-middle-dashed-2{
+  background-color: var(--dashed-bg-color);
+  border: 5px dashed var(--dashed-color);
+  border-radius: 25px 25px;
+  padding-right: 0 !important;
+}
+
+
+.article-middle-dashed-1 input[type=text],
+.article-middle-dashed-1 input[type=number],
+.article-middle-dashed-1 input[type=email],
+.article-middle-dashed-1 input[type=date],
+.article-middle-dashed-2 input[type=text],
+.article-middle-dashed-2 input[type=number],
+.article-middle-dashed-2 input[type=email],
+.article-middle-dashed-2 input[type=date]{
+box-shadow: 0px -2px 1px 1px rgb(178 91 11 / 30%);
+}
+
+/* .date::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.expiration-date::-webkit-calendar-picker-indicator {
+  transform: translateX(20rem);
+  position: absolute;
+  z-index: 10;
+} */
+
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  z-index: 11;
+  width: 30px;
+  height: 30px;
+}
+
+.date-wrap {
+  position: relative;
+  width: 200px;
+}
+
+.date-wrap::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  display: block;
+  background-color: #FFDE32;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  z-index: 9;
+}
+
+.date-wrap::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(/img/calendar2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.form-hihi {
+  /* box-shadow: none !important;
+  border: none !important; */
+  background-color: rgba(0,0,0,0);
+}
+
+.form-hihi:focus {
+  background-color: rgba(0,0,0,0) !important;
+}
+
+input[type="date" i] {
+  overflow: unset;
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  box-shadow: 0px -2px 1px 1px rgb(178 91 11 / 30%) !important;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: .25rem;
+  width: 134px;
+}
