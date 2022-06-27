@@ -3,7 +3,7 @@
 }
 
 .article-left-1{
-  width: 100%;
+  width: 300px;
 }
 
 .article-left-2{
@@ -51,7 +51,6 @@
 }
 
 .container{
-  padding: 0 !important;
 }
 
 .article-middle-bg-1{
@@ -90,7 +89,7 @@ label{
 }
 
 .article-middle-5{
-  width: 14%;
+  width: 260px;
   position: absolute;
   left: -1%;
 }
@@ -103,10 +102,25 @@ label{
 }
 
 
-.form-control,
+
 textarea
 {
-  box-shadow: 1px -4px 3px 1px rgb(178 91 11 / 30%);
+  background: #FFFFFF;
+  /* inner shadow */
+  
+  box-shadow: inset -1px 3px 3px rgba(179, 91, 11, 0.5);
+  border-radius: 16px;
+  height: 115px;
+}
+.form-control{
+  background: #FFFFFF;
+  /* inner shadow */
+  
+  box-shadow: inset -1px 3px 3px rgba(179, 91, 11, 0.5);
+  border-radius: 16px;
+  height: 50px;
+  
+  /* Inside auto layout */
 }
 
 .date::-webkit-calendar-picker-indicator {

@@ -1,24 +1,25 @@
+
 .firework {
   background-image: url(/img/firework.svg);
   background-size: cover;
+  height: 670px;
 }
 
 .article-main {
-  padding: 5.5% 0;
 }
 
 .article-top-1 {
   width: 100%;
-  margin-top: -10%;
+  z-index: 0;
 }
 
 .article-top-2 {
-  width: 100%;
+  width: 500px;
 }
 
 .article-top-3 {
   width: 100%;
-  margin-top: -10%;
+  z-index: 0;
 }
 
 .card-img {
@@ -40,7 +41,7 @@
 
 .slider {
   width: 100%;
-  height: 355px;
+  height: 518px;
   position: relative;
   margin: auto;
   overflow-x: scroll;
@@ -91,4 +92,30 @@
 
 .ctrl-btn.pro-next {
   right: -20px;
+}
+.ctrl-btn{
+  margin: -10px 100px;
+}
+.card-title{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 37px;
+}
+.event-price{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 48px;
+/* or 150% */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.005em;
+
+color: #FA7D09;
+position: absolute;
+bottom: 47px;
 }
