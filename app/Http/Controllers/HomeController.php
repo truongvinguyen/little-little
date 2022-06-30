@@ -23,6 +23,22 @@ class HomeController extends Controller
     {
         return view('contact');
     }
+    public function sendMail(Request $data){
+        Mail::send('mailContent',[
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'address' => $data['address'],
+            'feed' => $data['feed'],
+            
+        ],function($mail) use ($data){
+            $mail->to('nguyentruongvi2203@gmail.com');
+            $mail->from('nguyentruongvi2203@gmail.com');
+            $mail->subject('Liên hệ từ khách hàng');
+        });
+        return view('done');
+    }
 
    
+  
 }

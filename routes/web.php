@@ -13,4 +13,6 @@ Route::get('/show/{id}',[App\Http\Controllers\EventController::class, 'show'])->
 
 
 Route::get('/lien-he',[App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::post('/send-mail',[App\Http\Controllers\HomeController::class, 'sendMail'])->name('sendmail');
+
 

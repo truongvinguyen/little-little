@@ -38,14 +38,14 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto text-capitalize">
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link px-3 py-1 text-white" href="http://127.0.0.1:8000/home">trang chủ<span
+                                    <a class="nav-link px-3 py-1 text-white" href="{{ route('home')}}">trang chủ<span
                                             class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item active mx-4">
-                                    <a class="nav-link px-3 py-1 text-white" href="http://127.0.0.1:8000/events">sự kiện</a>
+                                    <a class="nav-link px-3 py-1 text-white" href="{{ route('event') }}">sự kiện</a>
                                 </li>
                                 <li class="nav-item mx-4">
-                                    <a class="nav-link px-3 py-1 text-white" href="http://127.0.0.1:8000/contact">liên hệ</a>
+                                    <a class="nav-link px-3 py-1 text-white" href="{{ route('contact') }}">liên hệ</a>
                                 </li>
                         </div>
                         <div class="header-phone">
