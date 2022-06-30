@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale= text-capitalize1.0">
-    <title>Đầm Sen Park</title>
+    <title>Sự kiện | Đầm Sen Park</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base.css') }}">
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
@@ -53,7 +53,7 @@
                             <div class="slide" id="slide">
                              @foreach($data as $item)
                                 <div class="col-sm-1 px-3">
-                                    <div class="card" style="border-radius: 10px;width:305px;height: 430px; ">
+                                    <div class="card" style="border-radius: 10px;width:305px;height: 430px;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
                                         <img src="/img/sukien.png" alt="" style="border-radius: 10px; width:100%; height: 212px;">
                                         <div class="card-body">
                                             <h4 class="card-title text-capitalize text-dark">{{$item->title}}</h4>
@@ -63,7 +63,7 @@
                                             <span class="text-dark">{{$item->start_date}} - {{$item->end_date}}</span>
                                             <h3 class="event-price">{{$item->price}} VNĐ</h3>
                                             <br>
-                                            <a href="/events_detail/{{$item->id}}" style="    position: absolute;
+                                            <a href="/show/{{$item->id}}" style="    position: absolute;
                                                 bottom: 10px;" class="btn px-0"><img src="/img/xem chi tiết btn.png" alt=""></a>
                                         </div>
                                     </div>
