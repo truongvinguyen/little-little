@@ -73,22 +73,26 @@
                                     <div class="article-middle-dashed-2">
                                         <img class="article-middle-3" src="/img/ticket.svg" alt="">
                                         <div style="height:20px"></div>
-                                        <form action="/orders" method="post" style="position:relative ;" enctype="multipart/form-data" >
+                                        <form action="{{ route('checkout') }}" method="post" style="position:relative ;" enctype="multipart/form-data" >
+                                            @csrf
                                             <div class="form-group col-md-11 my-2 mx-3">
                                                 <select class="form-select" name="event_id" aria-label="Default select example">
-                                                        <option value=""></option>
+                                                    @foreach ($event as $item)
+                                                     <option value="{{$item->id}}">{{$item->title}}</option>
+                                                    @endforeach
+                                                        
                                                 </select>
                                                     <div class="text-danger"></div>
                                             </div>
                                             <div class="form-row d-flex my-2 mx-3">
                                                 <div class="form-group col-md-6">
-                                                <input type="number" value="" name="amount" class="form-control" id="inputEmail4" placeholder="Số lượng">
+                                                <input type="number" value="" name="quanti" class="form-control" id="inputEmail4" placeholder="Số lượng">
                                                 <div class="text-danger">
                                                 </div>
                                                 </div>
                                                 <div class="form-group mx-4 col-md-6">
                                                     <div class="date-wrap">
-                                                      <input class="form-control" type="date">
+                                                      <input name="hsd" class="form-control" type="date">
                                                             <div class="text-danger"></div>
                                                     </div>
                                                 </div>

@@ -15,4 +15,9 @@ Route::get('/show/{id}',[App\Http\Controllers\EventController::class, 'show'])->
 Route::get('/lien-he',[App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::post('/send-mail',[App\Http\Controllers\HomeController::class, 'sendMail'])->name('sendmail');
 
+// Route::get('/thanh-toan',function(){
+//     return view('checkout.checkout');
+// });
 
+Route::post('/thanh-toan',[App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
+Route::post('/payment',[App\Http\Controllers\CheckoutController::class, 'payment'])->name('payment');

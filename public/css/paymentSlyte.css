@@ -58,8 +58,8 @@ label{
 }
 
 .article-middle-2{
-  width: 55%;
-  margin-left: 22%;
+  width: 360px;
+  margin-left: 33px;
   margin-top: -10%;
 }
 
@@ -71,17 +71,18 @@ label{
 }
 
 .article-middle-4{
-  width: 8.2%;
   position: absolute;
-  right: 38%;
-  top: 36%;
+  right: 558px;
+  top: 221px;
+  max-width: 127px;
 }
 
 .article-middle-5{
-  width: 14%;
+  width: 236px;
   position: absolute;
-  left: -1%;
-  bottom: -7%;
+  left: 3px;
+  /* bottom: 4px; */
+  top: 302px;
 }
 
 .article-middle-dashed-2{
@@ -114,19 +115,11 @@ box-shadow: 0px -2px 1px 1px rgb(178 91 11 / 30%);
 } */
 
 
-input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  z-index: 11;
-  width: 30px;
-  height: 30px;
-}
 
-.date-wrap {
-  position: relative;
-  width: 200px;
-}
 
-.date-wrap::before {
+
+
+/* .date-wrap::before {
   content: '';
   position: absolute;
   top: 2px;
@@ -137,40 +130,42 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 30px;
   border-radius: 5px;
   z-index: 9;
-}
+} */
 
-.date-wrap::after {
-  content: '';
-  position: absolute;
-  top: 7px;
-  right: 8px;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-image: url(/img/calendar2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 10;
-}
 
-.form-hihi {
-  /* box-shadow: none !important;
-  border: none !important; */
-  background-color: rgba(0,0,0,0);
-}
 
-.form-hihi:focus {
-  background-color: rgba(0,0,0,0) !important;
-}
 
-input[type="date" i] {
-  overflow: unset;
-}
+.form-control{
+  background: #FFFFFF;
+/* inner shadow */
 
-input[type="date"]::-webkit-datetime-edit-fields-wrapper {
-  box-shadow: 0px -2px 1px 1px rgb(178 91 11 / 30%) !important;
-  background-color: #fff;
-  padding: 6px 12px;
-  border-radius: .25rem;
-  width: 134px;
+box-shadow: inset -1px 3px 3px rgba(179, 91, 11, 0.5);
+border-radius: 16px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+height: 48px;
+}
+label{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 150% */
+  
+  
+  /* Text */
+  
+  color: #23221F;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }

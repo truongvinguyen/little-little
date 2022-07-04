@@ -17,7 +17,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home');
+        $event=Events::all();
+        return view('home',compact('event'));
     }
     public function contact()
     {
