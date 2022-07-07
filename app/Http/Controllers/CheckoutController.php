@@ -24,7 +24,10 @@ class CheckoutController extends Controller
         return view('checkout.checkout',compact('total','qty','name','hsd','phone','email','event_id'));
     }
     public function payment(Request $request){
-        order::create([
+        $ticket=array();
+        $quanti=$request->totalQty;
+        for($i = 0 ; $i<=$quanti ;$i++){
+        $ticket= order::create([
             'customer_name'=>$request->customer_name,
             'customer_phone'=>$request->customer_phone,
             'customer_email'=>$request->customer_email,
@@ -32,7 +35,14 @@ class CheckoutController extends Controller
             'totalPrice'=>$request->totalPrice,
             'event_id'=>$request->event_id,
             'date'=>$request->date,
-        ]);
-        echo "Thành công !!!";
+
+        ]);};
+        $event=DB::table('event')
+        ->select('*')
+        ->where('id',$request->event_id)
+        ->first();
+        $name_event=$event->title;
+        $data= order::where('customer_name',$request->customer_name)->get();
+        return view('ticket',compact('data','name_event','quanti'));
     }
 }

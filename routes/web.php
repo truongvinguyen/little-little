@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 
-
 Route::get('/',[App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
@@ -21,3 +20,10 @@ Route::post('/send-mail',[App\Http\Controllers\HomeController::class, 'sendMail'
 
 Route::post('/thanh-toan',[App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
 Route::post('/payment',[App\Http\Controllers\CheckoutController::class, 'payment'])->name('payment');
+
+Route::get('ticket',function(){
+    return view('ticket');
+});
+Route::get('qrcode', function () {
+    return QrCode::size(300)->generate('A basic example of QR code!');
+});

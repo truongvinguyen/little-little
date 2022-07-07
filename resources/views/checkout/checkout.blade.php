@@ -57,7 +57,7 @@
                 </div>
                 <div class="article-main mt-5">
                     <div class="container">
-                        <form class="row" method="post" action="{{ route('payment')}}" style="padding-right: 0;" enctype="multipart/form-data">
+                        <form class="row" method="post" action="{{ route('payment')}}" style="padding-right: 0;" >
                             @csrf
                             <div class="col-sm-8">
                                 <div class="article-middle-bg-1 px-3 py-2">
